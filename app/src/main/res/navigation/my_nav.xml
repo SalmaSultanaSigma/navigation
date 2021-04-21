@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_fragment"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.navigation.MainFragment"
+        android:label="DashBoard"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_thirdFragment"
+            app:destination="@id/thirdFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.example.navigation.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/action_secondFragment_to_showDetails"
+            app:destination="@id/showDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="com.example.navigation.ThirdFragment"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third" >
+        <action
+            android:id="@+id/action_thirdFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_thirdFragment_to_showDetails"
+            app:destination="@id/showDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/showDetails"
+        android:name="com.example.navigation.ShowDetails"
+        android:label="fragment_show_details"
+        tools:layout="@layout/fragment_show_details" >
+        <action
+            android:id="@+id/action_showDetails_to_mainFragment2"
+            app:destination="@id/mainFragment" />
+        <argument
+            android:name="CurrentUser"
+            app:argType="com.example.navigation.User" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue="none" />
+        <argument
+            android:name="ballance"
+            app:argType="integer"
+            android:defaultValue="99" />
+    </fragment>
+
+</navigation>
