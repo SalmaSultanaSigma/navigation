@@ -12,6 +12,7 @@ import com.example.navigation.databinding.FragmentMainBinding
 
 class MainFragment : Fragment() {
 
+
 //    override fun onCreate(savedInstanceState: Bundle?) {
 //        super.onCreate(savedInstanceState)
 //

@@ -25,10 +25,7 @@ class ThirdFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.button6.setOnClickListener {
-
-            val name:String= binding.editTextTextPersonName.text.toString()
-            val user=User(name,88888)
-            val action:NavDirections=ThirdFragmentDirections.actionThirdFragmentToShowDetails(user)
+           val action: NavDirections = ThirdFragmentDirections.actionThirdFragmentToMainFragment()
 
             findNavController().navigate(action)
         }
